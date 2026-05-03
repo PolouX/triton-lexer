@@ -1,0 +1,7 @@
+x = 10
+y = x + 5
+msg = ""
+z = 3.14
+2bad = 7
+msg = "hola
+w = @

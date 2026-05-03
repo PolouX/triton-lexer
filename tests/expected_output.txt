@@ -1,0 +1,399 @@
+=== test_input.py ===
+ERROR linea 5: identificador invalido '2bad'
+ERROR linea 6: cadena no terminada
+<x, NAME, 1>
+<ASSIGN, 1>
+<10, NUMBER, 1>
+<NEWLINE, 1>
+<y, NAME, 2>
+<ASSIGN, 2>
+<x, NAME, 2>
+<PLUS, 2>
+<5, NUMBER, 2>
+<NEWLINE, 2>
+<msg, NAME, 3>
+<ASSIGN, 3>
+<"", STRING, 3>
+<NEWLINE, 3>
+<z, NAME, 4>
+<ASSIGN, 4>
+<3.14, FLOAT, 4>
+<NEWLINE, 4>
+<ASSIGN, 5>
+<7, NUMBER, 5>
+<NEWLINE, 5>
+<msg, NAME, 6>
+<ASSIGN, 6>
+<NEWLINE, 6>
+<w, NAME, 7>
+<ASSIGN, 7>
+<AT, 7>
+<NEWLINE, 7>
+
+--- TABLA DE SIMBOLOS ---
+ID    NOMBRE                         TIPO       LINEA
+---   ------------------------------ ---------- -----
+1     x                              NAME       1
+2     10                             NUMBER     1
+3     y                              NAME       2
+4     5                              NUMBER     2
+5     msg                            NAME       3
+6     ""                             STRING     3
+7     z                              NAME       4
+8     3.14                           FLOAT      4
+9     7                              NUMBER     5
+10    w                              NAME       7
+
+=== test_keywords.py ===
+<DEF, 1>
+<foo, NAME, 1>
+<LPAREN, 1>
+<RPAREN, 1>
+<COLON, 1>
+<NEWLINE, 1>
+<INDENT, 2>
+<PASS, 2>
+<NEWLINE, 2>
+<DEDENT, 3>
+<DEF, 3>
+<bar, NAME, 3>
+<LPAREN, 3>
+<x, NAME, 3>
+<RPAREN, 3>
+<COLON, 3>
+<NEWLINE, 3>
+<INDENT, 4>
+<IF, 4>
+<x, NAME, 4>
+<GT, 4>
+<0, NUMBER, 4>
+<COLON, 4>
+<NEWLINE, 4>
+<INDENT, 5>
+<RETURN, 5>
+<TRUE, 5>
+<NEWLINE, 5>
+<DEDENT, 6>
+<ELIF, 6>
+<x, NAME, 6>
+<EQ, 6>
+<0, NUMBER, 6>
+<COLON, 6>
+<NEWLINE, 6>
+<INDENT, 7>
+<RETURN, 7>
+<NONE, 7>
+<NEWLINE, 7>
+<DEDENT, 8>
+<ELSE, 8>
+<COLON, 8>
+<NEWLINE, 8>
+<INDENT, 9>
+<RETURN, 9>
+<FALSE, 9>
+<NEWLINE, 9>
+<DEDENT, 10>
+<DEDENT, 10>
+<FOR, 10>
+<i, NAME, 10>
+<IN, 10>
+<range, NAME, 10>
+<LPAREN, 10>
+<10, NUMBER, 10>
+<RPAREN, 10>
+<COLON, 10>
+<NEWLINE, 10>
+<INDENT, 11>
+<IF, 11>
+<i, NAME, 11>
+<IS, 11>
+<NONE, 11>
+<COLON, 11>
+<NEWLINE, 11>
+<INDENT, 12>
+<CONTINUE, 12>
+<NEWLINE, 12>
+<DEDENT, 13>
+<IF, 13>
+<NOT, 13>
+<i, NAME, 13>
+<COLON, 13>
+<NEWLINE, 13>
+<INDENT, 14>
+<BREAK, 14>
+<NEWLINE, 14>
+<DEDENT, 15>
+<DEDENT, 15>
+<WHILE, 15>
+<TRUE, 15>
+<COLON, 15>
+<NEWLINE, 15>
+<INDENT, 16>
+<PASS, 16>
+<NEWLINE, 16>
+<DEDENT, 17>
+<result, NAME, 17>
+<ASSIGN, 17>
+<TRUE, 17>
+<AND, 17>
+<FALSE, 17>
+<NEWLINE, 17>
+<check, NAME, 18>
+<ASSIGN, 18>
+<TRUE, 18>
+<OR, 18>
+<FALSE, 18>
+<NEWLINE, 18>
+<flag, NAME, 19>
+<ASSIGN, 19>
+<NOT, 19>
+<TRUE, 19>
+<NEWLINE, 19>
+
+--- TABLA DE SIMBOLOS ---
+ID    NOMBRE                         TIPO       LINEA
+---   ------------------------------ ---------- -----
+1     foo                            NAME       1
+2     bar                            NAME       3
+3     x                              NAME       3
+4     0                              NUMBER     4
+5     i                              NAME       10
+6     range                          NAME       10
+7     10                             NUMBER     10
+8     result                         NAME       17
+9     check                          NAME       18
+10    flag                           NAME       19
+
+=== test_operators.py ===
+<a, NAME, 1>
+<ASSIGN, 1>
+<5, NUMBER, 1>
+<PLUS, 1>
+<3, NUMBER, 1>
+<NEWLINE, 1>
+<b, NAME, 2>
+<ASSIGN, 2>
+<10, NUMBER, 2>
+<MINUS, 2>
+<2, NUMBER, 2>
+<NEWLINE, 2>
+<c, NAME, 3>
+<ASSIGN, 3>
+<4, NUMBER, 3>
+<TIMES, 3>
+<7, NUMBER, 3>
+<NEWLINE, 3>
+<d, NAME, 4>
+<ASSIGN, 4>
+<20, NUMBER, 4>
+<DIVIDE, 4>
+<4, NUMBER, 4>
+<NEWLINE, 4>
+<e, NAME, 5>
+<ASSIGN, 5>
+<10, NUMBER, 5>
+<FLOORDIV, 5>
+<3, NUMBER, 5>
+<NEWLINE, 5>
+<f, NAME, 6>
+<ASSIGN, 6>
+<10, NUMBER, 6>
+<MOD, 6>
+<3, NUMBER, 6>
+<NEWLINE, 6>
+<g, NAME, 7>
+<ASSIGN, 7>
+<2, NUMBER, 7>
+<POWER, 7>
+<8, NUMBER, 7>
+<NEWLINE, 7>
+<h, NAME, 8>
+<ASSIGN, 8>
+<a, NAME, 8>
+<LT, 8>
+<b, NAME, 8>
+<NEWLINE, 8>
+<i, NAME, 9>
+<ASSIGN, 9>
+<a, NAME, 9>
+<GT, 9>
+<b, NAME, 9>
+<NEWLINE, 9>
+<j, NAME, 10>
+<ASSIGN, 10>
+<a, NAME, 10>
+<LE, 10>
+<b, NAME, 10>
+<NEWLINE, 10>
+<k, NAME, 11>
+<ASSIGN, 11>
+<a, NAME, 11>
+<GE, 11>
+<b, NAME, 11>
+<NEWLINE, 11>
+<l, NAME, 12>
+<ASSIGN, 12>
+<a, NAME, 12>
+<EQ, 12>
+<b, NAME, 12>
+<NEWLINE, 12>
+<m, NAME, 13>
+<ASSIGN, 13>
+<a, NAME, 13>
+<NE, 13>
+<b, NAME, 13>
+<NEWLINE, 13>
+<n, NAME, 14>
+<ASSIGN, 14>
+<a, NAME, 14>
+<LSHIFT, 14>
+<2, NUMBER, 14>
+<NEWLINE, 14>
+<o, NAME, 15>
+<ASSIGN, 15>
+<a, NAME, 15>
+<RSHIFT, 15>
+<1, NUMBER, 15>
+<NEWLINE, 15>
+<a, NAME, 16>
+<PLUSEQ, 16>
+<1, NUMBER, 16>
+<NEWLINE, 16>
+<b, NAME, 17>
+<MINUSEQ, 17>
+<1, NUMBER, 17>
+<NEWLINE, 17>
+<c, NAME, 18>
+<TIMESEQ, 18>
+<2, NUMBER, 18>
+<NEWLINE, 18>
+<d, NAME, 19>
+<DIVEQ, 19>
+<2, NUMBER, 19>
+<NEWLINE, 19>
+<x, NAME, 20>
+<ASSIGN, 20>
+<TILDE, 20>
+<a, NAME, 20>
+<NEWLINE, 20>
+<y, NAME, 21>
+<ASSIGN, 21>
+<a, NAME, 21>
+<AMPERSAND, 21>
+<b, NAME, 21>
+<NEWLINE, 21>
+<z, NAME, 22>
+<ASSIGN, 22>
+<a, NAME, 22>
+<PIPE, 22>
+<b, NAME, 22>
+<NEWLINE, 22>
+<w, NAME, 23>
+<ASSIGN, 23>
+<a, NAME, 23>
+<CARET, 23>
+<b, NAME, 23>
+<NEWLINE, 23>
+
+--- TABLA DE SIMBOLOS ---
+ID    NOMBRE                         TIPO       LINEA
+---   ------------------------------ ---------- -----
+1     a                              NAME       1
+2     5                              NUMBER     1
+3     3                              NUMBER     1
+4     b                              NAME       2
+5     10                             NUMBER     2
+6     2                              NUMBER     2
+7     c                              NAME       3
+8     4                              NUMBER     3
+9     7                              NUMBER     3
+10    d                              NAME       4
+11    20                             NUMBER     4
+12    e                              NAME       5
+13    f                              NAME       6
+14    g                              NAME       7
+15    8                              NUMBER     7
+16    h                              NAME       8
+17    i                              NAME       9
+18    j                              NAME       10
+19    k                              NAME       11
+20    l                              NAME       12
+21    m                              NAME       13
+22    n                              NAME       14
+23    o                              NAME       15
+24    1                              NUMBER     15
+25    x                              NAME       20
+26    y                              NAME       21
+27    z                              NAME       22
+28    w                              NAME       23
+
+=== test_indent.py ===
+<DEF, 1>
+<outer, NAME, 1>
+<LPAREN, 1>
+<RPAREN, 1>
+<COLON, 1>
+<NEWLINE, 1>
+<INDENT, 2>
+<x, NAME, 2>
+<ASSIGN, 2>
+<1, NUMBER, 2>
+<NEWLINE, 2>
+<IF, 3>
+<x, NAME, 3>
+<GT, 3>
+<0, NUMBER, 3>
+<COLON, 3>
+<NEWLINE, 3>
+<INDENT, 4>
+<y, NAME, 4>
+<ASSIGN, 4>
+<2, NUMBER, 4>
+<NEWLINE, 4>
+<IF, 5>
+<y, NAME, 5>
+<GT, 5>
+<1, NUMBER, 5>
+<COLON, 5>
+<NEWLINE, 5>
+<INDENT, 6>
+<z, NAME, 6>
+<ASSIGN, 6>
+<3, NUMBER, 6>
+<NEWLINE, 6>
+<DEDENT, 7>
+<z, NAME, 7>
+<ASSIGN, 7>
+<4, NUMBER, 7>
+<NEWLINE, 7>
+<DEDENT, 8>
+<x, NAME, 8>
+<ASSIGN, 8>
+<5, NUMBER, 8>
+<NEWLINE, 8>
+<DEDENT, 9>
+<DEF, 9>
+<simple, NAME, 9>
+<LPAREN, 9>
+<RPAREN, 9>
+<COLON, 9>
+<NEWLINE, 9>
+<INDENT, 10>
+<PASS, 10>
+<NEWLINE, 10>
+<DEDENT, 11>
+
+--- TABLA DE SIMBOLOS ---
+ID    NOMBRE                         TIPO       LINEA
+---   ------------------------------ ---------- -----
+1     outer                          NAME       1
+2     x                              NAME       2
+3     1                              NUMBER     2
+4     0                              NUMBER     3
+5     y                              NAME       4
+6     2                              NUMBER     4
+7     z                              NAME       6
+8     3                              NUMBER     6
+9     4                              NUMBER     7
+10    5                              NUMBER     8
+11    simple                         NAME       9
